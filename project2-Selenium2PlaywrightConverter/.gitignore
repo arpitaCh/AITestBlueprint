@@ -1,0 +1,39 @@
+# Environment variables and secrets
+.env
+.env.local
+
+# Temporary files
+.tmp/
+*.tmp
+
+# Node modules (if using Node.js tools)
+node_modules/
+
+# Python cache (if using Python tools)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Test outputs
+coverage/
+.nyc_output/
