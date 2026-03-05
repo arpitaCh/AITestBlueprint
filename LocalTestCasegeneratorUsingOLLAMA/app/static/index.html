@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITest Gen | Local LLM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="icon">🧪</span>
+                <h1>AITest Gen</h1>
+            </div>
+            <div class="status-indicator">
+                <span class="dot connected"></span>
+                <span>Ollama Online</span>
+            </div>
+        </header>
+
+        <main class="chat-interface">
+            <div id="chat-history" class="chat-history">
+                <div class="message system">
+                    <div class="avatar">🤖</div>
+                    <div class="content">
+                        Hello! I am your Local Test Case Generator running on <strong>Llama 3.2</strong>.
+                        Describe the feature or paste the code you want to test, and I'll generate the cases for you.
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <textarea id="user-input" placeholder="Describe functionality to test... (e.g. 'Login function with email validation')"></textarea>
+                <button id="send-btn" disabled>
+                    <span>Generate</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
