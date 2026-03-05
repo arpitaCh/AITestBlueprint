@@ -10,6 +10,26 @@ This project follows the **B.L.A.S.T.** protocol with **A.N.T.** 3-layer archite
 - **Layer 2 (Navigation):** `app/main.py` - FastAPI routing and orchestration
 - **Layer 3 (Tools):** `tools/generate_test_cases.py` - Deterministic execution
 
+### System Workflow Diagram
+
+```mermaid
+graph TD
+    User([User]) -->|Input Story| UI[Layer 2: App Navigation - FastAPI app/main.py]
+    UI -->|Consults| SOP[Layer 1: Architecture - SOPs / Markdown]
+    UI -->|Executes| Tools[Layer 3: Tools - Python Scripts]
+    Tools -->|API Call| LLM[Local LLM - Ollama Llama 3.2]
+    LLM -->|Formatted Response| Tools
+    Tools -->|Structured JSON| UI
+    UI -->|Stylized Output| User
+
+    subgraph "B.L.A.S.T. Protocol"
+        B[Blueprint] --> L[Link]
+        L --> A[Architect]
+        A --> S[Stylize]
+        S --> T[Trigger]
+    end
+```
+
 ## Prerequisites
 
 1. **Ollama installed and running**
