@@ -1,0 +1,44 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e6]:
+  - textbox "User ID (e.g. wm5p4rk)" [active] [ref=e8]
+  - textbox "Password" [ref=e10]
+  - generic [ref=e12] [cursor=pointer]:
+    - text: Country/Region
+    - generic [ref=e14]:
+      - combobox "Country/Region v" [ref=e15]:
+        - option "Argentina"
+        - option "Brazil"
+        - option "Canada"
+        - option "Central America"
+        - option "Chile"
+        - option "China"
+        - option "EMEA"
+        - option "India"
+        - option "Japan"
+        - option "Lab"
+        - option "STORE Lab"
+        - option "HomeOffice Lab"
+        - option "United States" [selected]
+        - option "Retail Link"
+        - option "Mexico"
+        - option "Puerto Rico"
+        - option "United Kingdom"
+      - text: v
+  - generic [ref=e17] [cursor=pointer]:
+    - text: Location
+    - generic [ref=e19]:
+      - combobox "Location v" [ref=e20]:
+        - option "Homeoffice" [selected]
+        - option "Store/Club"
+        - option "Store/Club - Pharmacy & Optical"
+        - option "Store/Club (NexGen – Pilot Site)"
+        - option "DC"
+      - text: v
+  - button "Sign In" [ref=e22] [cursor=pointer]
+  - link "Forgot Password?" [ref=e24] [cursor=pointer]:
+    - /url: /as/hsXCS_SdhP6XnDnF/resume/as/authorization.ping?ChangePassword=true
+  - link "Privacy Policy" [ref=e26] [cursor=pointer]:
+    - /url: https://corporate.walmart.com/privacy-security
+```
