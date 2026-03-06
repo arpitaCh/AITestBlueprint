@@ -1,0 +1,16 @@
+const { test, expect } = require('@playwright/test');
+const { HomePage } = require('../pages/HomePage');
+
+test.describe('Example Domain Tests', () => {
+  let homePage;
+
+  test.beforeEach(async ({ page }) => {
+    homePage = new HomePage(page);
+    await homePage.navigate('/');
+  });
+
+  test('should search for a term', async ({ page }) => {
+    await homePage.searchFor('Playwright');
+    await expect(page).toHaveURL(/.*search/);
+  });
+});
